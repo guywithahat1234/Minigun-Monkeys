@@ -1,20 +1,20 @@
 using MelonLoader;
 using BTD_Mod_Helper;
-using Hypersonic_Projectiles;
+using Minigun_Monkeys;
 using Il2CppAssets.Scripts.Models;
 using BTD_Mod_Helper.Extensions;
 using Il2CppAssets.Scripts.Models.Towers.Weapons;
 
-[assembly: MelonInfo(typeof(Hypersonic_Projectiles.Hypersonic_Projectiles), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
+[assembly: MelonInfo(typeof(Minigun_Monkeys.Minigun_Monkeys), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 
-namespace Hypersonic_Projectiles;
+namespace Minigun_Monkeys;
 
-public class Hypersonic_Projectiles : BloonsTD6Mod
+public class Minigun_Monkeys : BloonsTD6Mod
 {
     public override void OnApplicationStart()
     {
-        ModHelper.Msg<Hypersonic_Projectiles>("Hypersonic_Projectiles loaded!");
+        ModHelper.Msg<Minigun_Monkeys>("TestMod loaded!");
     }
 
     public override void OnNewGameModel(GameModel result)
@@ -22,7 +22,7 @@ public class Hypersonic_Projectiles : BloonsTD6Mod
         foreach(var weapon in result.GetDescendants<WeaponModel>().ToList())
         {
             weapon.rate = 0;
-            ModHelper.Msg<Hypersonic_Projectiles>($"Changed {weapon.name} rate to {weapon.rate}.");
+            ModHelper.Msg<Minigun_Monkeys>($"Changed {weapon.name} rate to {weapon.rate}.");
         }
     }
 }

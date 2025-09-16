@@ -8,7 +8,7 @@ on:
       - '*'
 
 env:
-  PROJECT_NAME: Hypersonic_Projectiles
+  PROJECT_NAME: Minigun_Monkeys
   
   MOD_HELPER_NAME: Btd6ModHelper
   BLOONSTD6: ./BloonsTD6
